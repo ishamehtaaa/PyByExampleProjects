@@ -1,7 +1,4 @@
 abc = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-
-
-
 #encode:
 def encode(enter, num):
     encoded = ""
@@ -10,7 +7,11 @@ def encode(enter, num):
             if i == k:
                 index = abc.index(k)
                 newnum = index + num
-                n = abc[newnum]
+                if (newnum > 26):
+                    b = (newnum-26)
+                    n = abc[b]
+                else:
+                    n = abc[newnum]
             elif i == " ":
                 n = " "
         encoded +=n
@@ -33,12 +34,9 @@ def decode(enter, num):
 
 
 
-
-menu = print(" 1. Encode a string. \n 2. Decode a string. \n 3. Quit.")
-
-
 cont = True
 while cont:
+    menu = print(" 1. Encode a string. \n 2. Decode a string. \n 3. Quit.")
     choice = int(input("Please choose a number. "))
     if choice == 1:
         zonk = input("Please enter your string. ")
