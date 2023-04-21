@@ -36,6 +36,6 @@ input_box.focus()
 
 answer = Message(text = "")
 answer.place(x = 200, y = 175, height = 55, width = 225)
-answer["bg"] = "blue"
+answer["bg"] = "pink"
 answer["fg"] = "white"
 window.mainloop()
